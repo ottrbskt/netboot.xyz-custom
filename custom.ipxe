@@ -8,5 +8,10 @@ echo Hello world!
 sleep 10
 goto custom_exit
 
+:option_one
+kernel https://boot.netboot.xyz/memdisk raw iso
+initrd https://cdn.download.clearlinux.org/current/clear-32380-pxe.tar.xz
+boot || goto custom_exit
+
 :custom_exit
 exit 0
